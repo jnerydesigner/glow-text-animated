@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Glow Text Animated</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Animation Font Glow - Homenagem a Minha filha</h1>
+      <h2>
+        <span class="letra">N</span>
+        <span class="letra">I</span>
+        <span class="letra">C</span>
+        <span class="letra">O</span>
+        <span class="letra">L</span>
+        <span class="letra">Y</span>
+      </h2>
+    </div>
+    <script>
+      const qtds = document.querySelectorAll('.letra').length;
+      const elemI = document.querySelectorAll('.letra');
+      // console.log(qtds);
+
+      for (let i = 1; i < qtds; i++) {
+        let timeVezes = i * 2;
+        let time = (timeVezes * 2) / 10;
+        let timeDelay = 0;
+        if (timeVezes % 10 !== 0) {
+          timeDelay = '0.' + i * 2 + 's';
+        } else {
+          timeDelay = time - 1 + '.0s';
+        }
+        console.log(timeDelay);
+        elemI[i].style.animationDelay = timeDelay;
+      }
+    </script>
+  </body>
+</html>
